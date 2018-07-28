@@ -60,7 +60,7 @@
                             <a class="nav-link" href="{{ route('files') }}">Материалы</a>
                         </li>
                         @auth
-                        <li class="nav-item px-1 dropdown">
+                        <li class="nav-item px-1 dropdown {{ (Route::currentRouteName() == 'profile') ? 'active' : '' }}">
                             <a class="nav-link dropdown-toggle" href="{{ route('profile') }}" id="navbarDropdownProfile" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 {{ Auth::user()->name }}

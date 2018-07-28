@@ -11,11 +11,21 @@
 |
 */
 
+<<<<<<< HEAD
 //Route::get('/', function(){return view('welcome');});
 
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/personal', 'IndexController@PersonalPage');
+=======
+Auth::routes();
+
+Route::get('/', 'IndexController@home')->name('home');
+Route::get('/projects', 'IndexController@projects');
+/* IndexController@PersonalPage */
+
+
+>>>>>>> 1f56ccf79ecc8db84442ba9b01986322d084b684
 Route::get('upload',['as' => 'upload_form', 'uses' => 'UploadController@getForm']);
 Route::post('upload',['as' => 'upload_file','uses' => 'UploadController@upload']);

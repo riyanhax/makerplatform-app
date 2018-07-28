@@ -4,7 +4,7 @@
 
 @section('content')
 <section id="about">
-  <div class="jumbotron jumbotron-fluid text-white" style="background: url('assets/background.jpg') center center fixed no-repeat; background-size: cover;">
+  <div class="jumbotron jumbotron-fluid text-white my-0" style="background: url('assets/background.jpg') center center fixed no-repeat; background-size: cover;">
     <div class="container">
       <h1 class="display-4">Методические материалы</h1>
       <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.

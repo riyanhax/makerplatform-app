@@ -47,16 +47,16 @@
 
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav ml-auto mr-3">
-                        <li class="nav-item px-1 {{ (\Request::route()->getName() == 'home') ? 'active' : '' }}">
+                        <li class="nav-item px-1 {{ (Route::currentRouteName() == 'home') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('home') }}">Главная</a>
                         </li>
-                        <li class="nav-item px-1 {{ (\Request::route()->getName() == 'projects') ? 'active' : '' }}">
+                        <li class="nav-item px-1 {{ (Route::currentRouteName() == 'projects') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('projects') }}">Проекты</a>
                         </li>
-                        <li class="nav-item px-1 {{ (\Request::route()->getName() == 'contests') ? 'active' : '' }}">
+                        <li class="nav-item px-1 {{ (Route::currentRouteName() == 'contests') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('contests') }}">Конкурсы</a>
                         </li>
-                        <li class="nav-item px-1 {{ (\Request::route()->getName() == 'files') ? 'active' : '' }}">
+                        <li class="nav-item px-1 {{ (Route::currentRouteName() == 'files') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('files') }}">Файлы</a>
                         </li>
                         @auth
@@ -77,8 +77,8 @@
                     </ul>
                     @guest
                     <div class="form-inline btn-group" role="group">
-                        <a class="btn {{ (\Request::route()->getName() == 'register') ? 'btn-secondary' : 'btn-outline-light' }}" type="button" href="{{ url('/register') }}">Регистрация</a>
-                        <a class="btn {{ (\Request::route()->getName() == 'login') ? 'btn-secondary' : 'btn-outline-light' }}" type="button" href="{{ url('/login') }}">Вход</a>
+                        <a class="btn {{ (Route::currentRouteName() == 'register') ? 'btn-secondary' : 'btn-outline-light' }}" type="button" href="{{ url('/register') }}">Регистрация</a>
+                        <a class="btn {{ (Route::currentRouteName() == 'login') ? 'btn-secondary' : 'btn-outline-light' }}" type="button" href="{{ url('/login') }}">Вход</a>
                     </div>
                     @endguest
                 </div>

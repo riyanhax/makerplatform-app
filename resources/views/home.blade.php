@@ -106,8 +106,8 @@
           <div class="card bg-dark text-white my-2">
             <img class="card-img-top" src="assets/background.jpg" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">Проект №1</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title">{{$max1['ProjectName']}}</h5>
+              <p class="card-text">{{$max1['Text']}}</p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
@@ -117,8 +117,8 @@
           <div class="card bg-dark text-white my-2">
             <img class="card-img-top" src="assets/background.jpg" alt="TITLE">
             <div class="card-body">
-              <h5 class="card-title">Проект №2</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title">{{$max2['ProjectName']}}</h5>
+              <p class="card-text">{{$max2['Text']}}</p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
@@ -128,8 +128,8 @@
           <div class="card bg-dark text-white my-2">
             <img class="card-img-top" src="assets/background.jpg" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">Проект №3</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title">{{$max3['ProjectName']}}</h5>
+              <p class="card-text">{{$max3['Text']}}</p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>

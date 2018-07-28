@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Главная страница')
+
 @section('content')
 <section id="about">
   <div class="jumbotron jumbotron-fluid text-white" style="background: url('assets/background.jpg') center center fixed no-repeat; background-size: cover;">

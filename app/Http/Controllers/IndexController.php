@@ -29,7 +29,8 @@ class IndexController extends Controller
         return view('projects');
     }
 
-    function PersonalPage(){
+    public function profile()
+    {
 		$infoAboutUser = User::select(['name', 'surname', 'patronymic', 'email'])->WHERE('id', '8')->get();
 		$projects = project::select(['ProjectName', 'DateAdd', 'dateUpdate'])->WHERE('idUser', '8')->get();		//ВЫВОДИТ ТРЕТЬЕГО
 		return  view('personalpage')->with(['infoAboutUser'=> $infoAboutUser, 'projects'=>$projects]);

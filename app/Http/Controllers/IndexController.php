@@ -21,18 +21,18 @@ class IndexController extends Controller
 
     public function contests()
     {
-        return view('projects');
+        return view('contests');
     }
 
     public function files()
     {
-        return view('projects');
+        return view('files');
     }
 
     public function profile()
     {
 		$infoAboutUser = User::select(['name', 'surname', 'patronymic', 'email'])->WHERE('id', '8')->get();
 		$projects = project::select(['ProjectName', 'DateAdd', 'dateUpdate'])->WHERE('idUser', '8')->get();		//ВЫВОДИТ ТРЕТЬЕГО
-		return  view('personalpage')->with(['infoAboutUser'=> $infoAboutUser, 'projects'=>$projects]);
+		return  view('profile')->with(['infoAboutUser'=> $infoAboutUser, 'projects'=>$projects]);
 	}
 }

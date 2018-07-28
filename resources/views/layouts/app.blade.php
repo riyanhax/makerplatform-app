@@ -57,7 +57,7 @@
                             <a class="nav-link" href="{{ route('contests') }}">Конкурсы</a>
                         </li>
                         <li class="nav-item px-1 {{ (Route::currentRouteName() == 'files') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ route('files') }}">Файлы</a>
+                            <a class="nav-link" href="{{ route('files') }}">Материалы</a>
                         </li>
                         @auth
                         <li class="nav-item px-1 dropdown">

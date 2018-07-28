@@ -19,6 +19,16 @@ class IndexController extends Controller
         return view('projects');
     }
 
+    public function contests()
+    {
+        return view('projects');
+    }
+
+    public function files()
+    {
+        return view('projects');
+    }
+
     function PersonalPage(){
 		$infoAboutUser = User::select(['name', 'surname', 'patronymic', 'email'])->WHERE('id', '8')->get();
 		$projects = project::select(['ProjectName', 'DateAdd', 'dateUpdate'])->WHERE('idUser', '8')->get();		//ВЫВОДИТ ТРЕТЬЕГО

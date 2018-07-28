@@ -17,6 +17,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/projects', 'IndexController@projects')->name('projects');
 Route::get('/contests', 'IndexController@contests')->name('contests');
 Route::get('/files', 'IndexController@files')->name('files');
+Route::get('/profile', 'IndexController@files')->name('profile')->middleware('auth');
 /* IndexController@PersonalPage */
 
 

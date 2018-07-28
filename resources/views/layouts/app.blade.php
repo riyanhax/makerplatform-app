@@ -78,7 +78,7 @@
                     @guest
                     <div class="form-inline btn-group" role="group">
                         <a class="btn {{ (\Request::route()->getName() == 'register') ? 'btn-secondary' : 'btn-outline-light' }}" type="button" href="{{ url('/register') }}">Регистрация</a>
-                        <a class="btn {{ (\Request::route()->getName() == 'login') ? 'btn-secondary' : 'btn-outline-light' }}" type="button" href="{{ url('/login') }}">{{ __('Login') }}</a>
+                        <a class="btn {{ (\Request::route()->getName() == 'login') ? 'btn-secondary' : 'btn-outline-light' }}" type="button" href="{{ url('/login') }}">Вход</a>
                     </div>
                     @endguest
                 </div>

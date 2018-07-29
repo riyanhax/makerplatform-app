@@ -20,6 +20,7 @@
 				<h5 class="card-title">{{$project->ProjectName}}</h5>
 				<p class="card-text">{{$project->Text}}</p>
 				<a href="#" class="btn btn-primary">Подробнее</a>
+				<a href="#" class="btn btn-primary">Удалить</a>
 			</div>
 			<div class="card-footer text-muted">
 				Добавлено: {{$project->created_at}} | Изменено: {{$project->updated_at}}

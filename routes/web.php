@@ -20,7 +20,7 @@ Route::get('/files', 'IndexController@files')->name('files');
 Route::get('/profile', 'IndexController@profile')->name('profile')->middleware('auth');
 Route::get('/add-project', 'IndexController@addProject')->name('addproject')->middleware('auth');
 Route::post('/add-project', 'IndexController@SaveProject')->name('saveProject');
-Route::get('/project/{id}', 'IndexController@Project');
+Route::get('/project/{id}', 'IndexController@Project')->name('project');
 Route::delete('delete/{project}', 'IndexController@DeletePoject')->name('projectDelete');
 
 

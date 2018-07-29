@@ -133,7 +133,6 @@
 <section id="latest">
   <div class="container my-5 text-center">
     <h2>Новые проекты</h2>
-    <hr>
 
     <div id="showcase" class="carousel slide" data-ride="carousel">
 

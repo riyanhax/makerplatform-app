@@ -34,8 +34,11 @@ class IndexController extends Controller
 
     public function profile()
     {
-		$infoAboutUser = User::select(['name', 'surname', 'patronymic', 'email'])->WHERE('id', '8')->get();
-		$projects = project::select(['ProjectName', 'created_at', 'updated_at'])->WHERE('idUser', '8')->get();		//ВЫВОДИТ ТРЕТЬЕГО
+		$idUser = Auth::id();
+		$infoAboutUser = User::select(['name', 'surname', 'patronymic', 'email'])
+			->WHERE('id', $idUser)
+			->get();
+		$projects = project::select(['ProjectName', 'created_at', 'updated_at'])->WHERE('idUser', $idUser)->get();
 		return  view('profile')->with(['infoAboutUser'=> $infoAboutUser, 'projects'=>$projects]);
 	}
 	

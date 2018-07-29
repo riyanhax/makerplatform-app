@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $top = project::orderBy('id', 'desc')->take(3)->get()->all();
+        $top = project::orderBy('Rating', 'desc')->take(3)->get()->all();
         return view('home')->with(['top' => $top]);
     }
 }

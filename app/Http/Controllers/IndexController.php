@@ -48,12 +48,12 @@ class IndexController extends Controller
 	
 	public function Project($id)
 	{
-		$infoProject = DB::table('projects')
+		$project = DB::table('projects')
 			->join('users', 'projects.idUser', '=', 'users.id')
 			->select('name', 'surname', 'ProjectName', 'Text', 'Rating', 'projects.created_at', 'projects.updated_at')
 			->WHERE('projects.id', $id)
 			->get()->all();
-		return view('oneproject')->with(['infoProject'=>$infoProject[0]]);
+		return view('oneproject')->with(['project'=>$project[0]]);
 	}
 	
 	public function SaveProject(Request $request){

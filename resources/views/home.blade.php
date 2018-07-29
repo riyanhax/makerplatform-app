@@ -27,13 +27,13 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" src="http://placehold.it/800x600/666655/fff" alt="First slide">
+                <img class="d-block w-100" src="{{ asset('assets/photos/1.jpg') }}" alt="First slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="http://placehold.it/800x600/665566/fff" alt="Second slide">
+                <img class="d-block w-100" src="{{ asset('assets/photos/2.jpg') }}" alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="http://placehold.it/800x600/556666/fff" alt="Third slide">
+                <img class="d-block w-100" src="{{ asset('assets/photos/3.jpg') }}" alt="Third slide">
               </div>
             </div>
           </div>
@@ -51,7 +51,7 @@
 
       <div class="col-12 col-lg-5 order-1 order-lg-2">
         <div class="card bg-dark text-white my-2">
-          <img class="card-img-top" src="assets/background.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{{ asset('assets/photos/4.jpg') }}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">{{ $top[0]['ProjectName'] }}</h5>
             <p class="card-text">{{ $top[0]['Text'] }}</p>
@@ -62,7 +62,7 @@
 
       <div class="col order-2 order-lg-1">
         <div class="card bg-dark text-white my-2">
-          <img class="card-img-top" src="assets/background.jpg" alt="TITLE">
+          <img class="card-img-top" src="{{ asset('assets/photos/5.jpg') }}" alt="TITLE">
           <div class="card-body">
             <h5 class="card-title">{{ $top[1]['ProjectName'] }}</h5>
             <p class="card-text">{{ $top[1]['Text'] }}</p>
@@ -73,7 +73,7 @@
 
       <div class="col order-3">
         <div class="card bg-dark text-white my-2">
-          <img class="card-img-top" src="assets/background.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{{ asset('assets/photos/6.jpg') }}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">{{ $top[2]['ProjectName'] }}</h5>
             <p class="card-text">{{ $top[2]['Text'] }}</p>

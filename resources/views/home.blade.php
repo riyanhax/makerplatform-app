@@ -53,8 +53,8 @@
         <div class="card bg-dark text-white my-2">
           <img class="card-img-top" src="assets/background.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">{{ $max1['ProjectName'] }}</h5>
-            <p class="card-text">{{ $max1['Text'] }}</p>
+            <h5 class="card-title">{{ $top[0]['ProjectName'] }}</h5>
+            <p class="card-text">{{ $top[0]['Text'] }}</p>
             <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
           </div>
         </div>
@@ -64,8 +64,8 @@
         <div class="card bg-dark text-white my-2">
           <img class="card-img-top" src="assets/background.jpg" alt="TITLE">
           <div class="card-body">
-            <h5 class="card-title">{{ $max2['ProjectName'] }}</h5>
-            <p class="card-text">{{ $max2['Text'] }}</p>
+            <h5 class="card-title">{{ $top[1]['ProjectName'] }}</h5>
+            <p class="card-text">{{ $top[1]['Text'] }}</p>
             <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
           </div>
         </div>
@@ -75,8 +75,8 @@
         <div class="card bg-dark text-white my-2">
           <img class="card-img-top" src="assets/background.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">{{ $max3['ProjectName'] }}</h5>
-            <p class="card-text">{{ $max3['Text'] }}</p>
+            <h5 class="card-title">{{ $top[1]['ProjectName'] }}</h5>
+            <p class="card-text">{{ $top[1]['Text'] }}</p>
             <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
           </div>
         </div>

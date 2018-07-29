@@ -50,7 +50,7 @@ class IndexController extends Controller
 	{
 		$infoProject = DB::table('projects')
 			->join('users', 'projects.idUser', '=', 'users.id')
-			->select('name', 'surname', 'ProjectName', 'Text', 'Rating', 'created_at', 'updated_at')
+			->select('name', 'surname', 'ProjectName', 'Text', 'Rating', 'projects.created_at', 'projects.updated_at')
 			->WHERE('projects.id', $id)
 			->get();
 		return view('oneproject')->with(['infoProject'=>$infoProject]);
@@ -69,6 +69,17 @@ class IndexController extends Controller
 		$project->Text=$request->input('Description');
 		$project->Rating = 10;
 		$project->save();  
+		$idProject=project::select(['id'])->get()->last();
+		foreach ($request->file1() as $file) {
+			foreach ($file as $f) {
+				$f->move(storage_path('/storage/projects/'.$idUser.'/'.$idProject.'/img'), time().'_'.$f->getClientOriginalName());
+			}
+		}
+		foreach ($request->file2() as $file) {
+			foreach ($file as $f) {
+				$f->move(storage_path('/storage/projects/'.$idUser.'/'.$idProject.'/doc'), time().'_'.$f->getClientOriginalName());
+			}
+		}
 		return redirect('/profile'); 
 	}
 }

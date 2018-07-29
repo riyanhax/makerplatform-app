@@ -20,9 +20,10 @@
 						<h5 class="card-title">{{$project->ProjectName}}</h5>
 						<p class="card-text">{{$project->Text}}</p>
 						<a href="#" class="btn btn-primary">Подробнее</a>
-						<form action="{{route('projectDelete',['project'=>$project->id])}}" method="POST">
+					<form action="{{route('projectDelete',['project'=>$project->id])}}" method="POST">
 						<input type=hidden name="_method" value="DELETE"> 
 						<button type="submit" class="btn btn-primary">Удалить</button>
+						{{ csrf_field() }}
 					</form>
 					</div>
 					<div class="card-footer text-muted">

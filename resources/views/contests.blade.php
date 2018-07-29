@@ -5,7 +5,7 @@
   <div class="jumbotron jumbotron-fluid text-white my-0" style="background: url('assets/background.jpg') center center fixed no-repeat; background-size: cover;">
     <div class="container">
       <h1 class="display-4">Конкурсы и гранты</h1>
-      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+      <p class="lead">Нужны ресурсы на проект или есть что продемонстрировать? <br>Maker Platform поможет быть в курсе и напомнит о важных мероприятиях.
       </p>
     </div>
   </div>

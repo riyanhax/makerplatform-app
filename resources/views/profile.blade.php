@@ -22,7 +22,6 @@
 						<div class="row">
 							<div class="col-auto">
 								<a href="{{ route('project', ['id' => $project->id]) }}" class="btn btn-primary">Подробнее</a>
-
 							</div>
 							<div class="col">
 								<form class="form-inline" action="{{route('projectDelete',['project'=>$project->id])}}" method="POST">

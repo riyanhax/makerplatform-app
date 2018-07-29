@@ -9,14 +9,13 @@
       <div class="row">
         <div class="col">
           <h1 class="display-4">Проектная платформа</h1>
-          <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content
-            or information.
+          <p class="lead">У тебя есть проект? Давай расскажем миру о нем!
           </p>
           <hr class="my-3 hr-inverse">
-          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+          <p>Maker Platform — инструмент который поможет организовать твою проектную деятельность, собрать команду и представить свой проект на масштабных конкурсах.<br>Изучай! Общайся! Создавай!</p>
           <p class="lead">
             <a class="btn btn-primary btn-lg my-1" href="{{ route('addproject') }}" role="button">Добавить проект</a>
-            <a class="btn btn-secondary btn-lg my-1" href="{{ url('/projects') }}" role="button">Все проекты</a>
+            <a class="btn btn-secondary btn-lg my-1" href="{{ route('projects') }}" role="button">Все проекты</a>
           </p>
         </div>
         <div class="col-4 d-none d-lg-block">
@@ -54,9 +53,9 @@
         <div class="card bg-dark text-white my-2">
           <img class="card-img-top" src="assets/background.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">{{$max1['ProjectName']}}</h5>
-            <p class="card-text">{{$max1['Text']}}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">{{ $max1['ProjectName'] }}</h5>
+            <p class="card-text">{{ $max1['Text'] }}</p>
+            <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
           </div>
         </div>
       </div>
@@ -65,9 +64,9 @@
         <div class="card bg-dark text-white my-2">
           <img class="card-img-top" src="assets/background.jpg" alt="TITLE">
           <div class="card-body">
-            <h5 class="card-title">{{$max2['ProjectName']}}</h5>
-            <p class="card-text">{{$max2['Text']}}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">{{ $max2['ProjectName'] }}</h5>
+            <p class="card-text">{{ $max2['Text'] }}</p>
+            <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
           </div>
         </div>
       </div>
@@ -76,9 +75,9 @@
         <div class="card bg-dark text-white my-2">
           <img class="card-img-top" src="assets/background.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">{{$max3['ProjectName']}}</h5>
-            <p class="card-text">{{$max3['Text']}}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">{{ $max3['ProjectName'] }}</h5>
+            <p class="card-text">{{ $max3['Text'] }}</p>
+            <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
           </div>
         </div>
       </div>
@@ -90,8 +89,7 @@
 <section id="contests" class="py-1 bg-dark">
   <div class="container my-5 text-center">
     <h2 class="text-white">Конкурсы проектов</h2>
-    <p class="text-white">Use the
-      <code>Portfolio module</code> to spread your works to the world</p>
+    <p class="text-white">Нужны ресурсы на проект или есть что продемонстрировать? <br>Maker Platform поможет быть в курсе и напомнит о важных мероприятиях.</p>
 
     <div class="card text-center mb-3">
       <div class="card-header">

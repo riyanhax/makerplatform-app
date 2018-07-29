@@ -52,8 +52,8 @@ class IndexController extends Controller
 			->join('users', 'projects.idUser', '=', 'users.id')
 			->select('name', 'surname', 'ProjectName', 'Text', 'Rating', 'created_at', 'updated_at')
 			->WHERE('projects.id', $id)
-			->get();
-		return view('oneproject')->with(['infoProject'=>$infoProject]);
+			->get()->all();
+		return view('oneproject')->with(['infoProject'=>$infoProject[0]]);
 	}
 	
 	public function SaveProject(Request $request){

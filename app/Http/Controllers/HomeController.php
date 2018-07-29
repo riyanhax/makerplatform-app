@@ -25,9 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-		$max1 = project::All()->sortByDesc('Rating')->first();
-		$max2 = project::All()->sortByDesc('Rating')->where('id', '!=', $max1['id'])->first();
-		$max3 = project::All()->sortByDesc('Rating')->where('id', '!=', $max1['id'])->where('id', '!=', $max2['id'])->first();
-        return view('home')->with(['max1'=>$max1, 'max2'=>$max2, 'max3'=>$max3]);
+        $top = project::orderBy('id', 'desc')->take(3)->get()->all();
+        return view('home')->with(['top' => $top]);
     }
 }

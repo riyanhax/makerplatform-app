@@ -47,9 +47,9 @@
   <div class="container my-5 text-center">
     <h2>Топ проектов</h2>
     <p>Проекты, набравшие наибольшее количество положительных оценок</p>
-    <div class="row align-items-center">
+    <div class="row">
 
-      <div class="col-12 col-lg-5 order-1 order-lg-2">
+      <div class="col-12 col-lg-4 order-1 order-lg-2">
         <div class="card bg-dark text-white my-2">
           <img class="card-img-top" src="{{ asset('assets/photos/4.jpg') }}" alt="Card image cap">
           <div class="card-body">
@@ -60,7 +60,7 @@
         </div>
       </div>
 
-      <div class="col order-2 order-lg-1">
+      <div class="col-12 col-sm-6 col-lg-4 order-2 order-lg-1">
         <div class="card bg-dark text-white my-2">
           <img class="card-img-top" src="{{ asset('assets/photos/5.jpg') }}" alt="TITLE">
           <div class="card-body">
@@ -71,7 +71,7 @@
         </div>
       </div>
 
-      <div class="col order-3">
+      <div class="col-12 col-sm-6 col-lg-4 order-3">
         <div class="card bg-dark text-white my-2">
           <img class="card-img-top" src="{{ asset('assets/photos/1.jpg') }}" alt="Card image cap">
           <div class="card-body">

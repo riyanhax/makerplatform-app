@@ -11,10 +11,17 @@
 
 <section id="contests" class="py-1">
 	<div class="container my-5">
-	<a class="btn btn-primary btn-lg my-1" href="{{ route('addproject') }}" role="button">Добавить проект</a>
-	<br>
-		<h2>Проекты:</h2>
 		<div class="row">
+			<div class="col">
+				<h2>Проекты:</h2>
+			</div>
+			<div class="col text-right">
+				<a class="btn btn-primary" href="{{ route('addproject') }}" role="button">Добавить проект</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">{{ (count($projects->all()) == 0) ? 'Нет проектов' : ''}}</div>
+
 			@foreach ($projects as $project)
 			<div class="col-12 col-lg-6 py-2">
 				<div class="card">
@@ -29,7 +36,7 @@
 								<form class="form-inline" action="{{route('projectDelete',['project'=>$project->id])}}" method="POST">
 									<input type=hidden name="_method" value="DELETE">
 									<button type="submit" class="btn btn-primary">Удалить</button>
-                                    {{ csrf_field() }}
+									{{ csrf_field() }}
 								</form>
 							</div>
 						</div>

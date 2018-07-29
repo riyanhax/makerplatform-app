@@ -38,7 +38,7 @@ class IndexController extends Controller
 		$infoAboutUser = User::select(['name', 'surname', 'patronymic', 'email'])
 			->WHERE('id', $idUser)
 			->get()->all()[0];
-			$projects = project::select(['ProjectName', 'Text', 'Rating', 'created_at', 'updated_at'])->WHERE('idUser', $idUser)->get();
+		$projects = project::select(['id', 'ProjectName', 'Text', 'Rating', 'created_at', 'updated_at'])->WHERE('idUser', $idUser)->get();
 		return  view('profile')->with(['infoAboutUser'=> $infoAboutUser, 'projects'=>$projects]);
 	}
 	
@@ -79,6 +79,11 @@ class IndexController extends Controller
 			}
 		}
 		return redirect('/profile'); 
+	}
+	
+	public function DeleteProject(project $project){
+		/*$project->delete();*/
+		return redirect('/profile?' . $project->id);
 	}
 }
 

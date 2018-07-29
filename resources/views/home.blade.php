@@ -133,10 +133,7 @@
 <section id="latest">
   <div class="container my-5 text-center">
     <h2>Новые проекты</h2>
-    <p>Use the
-      <code>Clients module</code> to show your customers, the clients who already trust your business</p>
     <hr>
-
 
     <div id="showcase" class="carousel slide" data-ride="carousel">
 
@@ -233,8 +230,7 @@
 <section id="partners" class="py-1 bg-secondary text-white">
   <div class="container my-5 text-center">
     <h2>Наши партнёры</h2>
-    <p>Use the
-      <code>Clients module</code> to show your customers, the clients who already trust your business</p>
+    <p>Компании, которые поддерживают нашу миссию</p>
 
     <div class="row">
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 my-4">

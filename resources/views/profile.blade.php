@@ -27,6 +27,7 @@
 								<form class="form-inline" action="{{route('projectDelete',['project'=>$project->id])}}" method="POST">
 									<input type=hidden name="_method" value="DELETE">
 									<button type="submit" class="btn btn-primary">Удалить</button>
+                                    {{ csrf_field() }}
 								</form>
 							</div>
 						</div>
@@ -42,31 +43,3 @@
 </section>
 
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<html>
-
-<head>
-	<title></title>
-	<meta charset="utf-8">
-</head>
-
-<body>
-
-</body>
-
-</html>

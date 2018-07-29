@@ -15,7 +15,7 @@
           <hr class="my-3 hr-inverse">
           <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
           <p class="lead">
-            <a class="btn btn-primary btn-lg my-1" href="{{ url('/addproject') }}" role="button">Добавить проект</a>
+            <a class="btn btn-primary btn-lg my-1" href="{{ route('addproject') }}" role="button">Добавить проект</a>
             <a class="btn btn-secondary btn-lg my-1" href="{{ url('/projects') }}" role="button">Все проекты</a>
           </p>
         </div>

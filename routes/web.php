@@ -18,6 +18,9 @@ Route::get('/projects', 'IndexController@projects')->name('projects');
 Route::get('/contests', 'IndexController@contests')->name('contests');
 Route::get('/files', 'IndexController@files')->name('files');
 Route::get('/profile', 'IndexController@profile')->name('profile')->middleware('auth');
+Route::get('/add-project', 'IndexController@addProject')->name('addproject')->middleware('auth');
+Route::get('/project/{id}', 'IndexController@Project');
+
 
 Route::get('/upload', ['as' => 'upload_form', 'uses' => 'UploadController@getForm']);
 Route::post('/upload', ['as' => 'upload_file', 'uses' => 'UploadController@upload']);

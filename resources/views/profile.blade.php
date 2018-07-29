@@ -11,6 +11,8 @@
 
 <section id="contests" class="py-1">
 	<div class="container my-5">
+	<a class="btn btn-primary btn-lg my-1" href="{{ route('addproject') }}" role="button">Добавить проект</a>
+	<br>
 		<h2>Проекты:</h2>
 		<div class="row">
 			@foreach ($projects as $project)

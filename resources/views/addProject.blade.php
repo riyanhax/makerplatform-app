@@ -1,4 +1,6 @@
-@extends('layouts.app') @section('content')
+@extends('layouts.app')
+
+@section('content')
 <section id="about">
 	<div class="jumbotron jumbotron-fluid text-white my-0" style="background: url('assets/background.jpg') center center fixed no-repeat; background-size: cover;">
 		<div class="container">

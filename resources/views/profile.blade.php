@@ -14,34 +14,20 @@
 		<h2>Проекты:</h2>
 		<div class="row">
 			@foreach ($projects as $project)
-<<<<<<< HEAD
-			<div class="card col-12 col-6-lg">
-				<div class="card-body">
-					<h5 class="card-title">{{$project->ProjectName}}</h5>
-					<p class="card-text">{{$project->Text}}</p>
-					<a href="#" class="btn btn-primary">Подробнее</a>
-					<form action="{{route('projectDelete',['project'=>$project->id])}}" method="POST">
-						<input type=hidden name="_method" value="DELETE"> 
-						<button type="submit" class="btn btn-primary">Удалить</button>
-					</form>
-				</div>
-				<div class="card-footer text-muted">
-					Добавлено: {{$project->created_at}} | Изменено: {{$project->updated_at}}
-=======
 			<div class="col-12 col-lg-6">
 				<div class="card">
 					<div class="card-body">
 						<h5 class="card-title">{{$project->ProjectName}}</h5>
 						<p class="card-text">{{$project->Text}}</p>
 						<a href="#" class="btn btn-primary">Подробнее</a>
-						<form action="" method="POST">
-							<button type="submit" class="btn btn-primary">Удалить</button>
-						</form>
+						<form action="{{route('projectDelete',['project'=>$project->id])}}" method="POST">
+						<input type=hidden name="_method" value="DELETE"> 
+						<button type="submit" class="btn btn-primary">Удалить</button>
+					</form>
 					</div>
 					<div class="card-footer text-muted">
 						Добавлено: {{$project->created_at}} | Изменено: {{$project->updated_at}}
 					</div>
->>>>>>> b1fc93ffd05cd7ee71571c25a26e660f48430a5a
 				</div>
 			</div>
 			@endforeach

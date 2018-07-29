@@ -69,6 +69,12 @@ class IndexController extends Controller
 		$project->Text=$request->input('Description');
 		$project->Rating = 10;
 		$project->save();  
+		$idProject=$project->id;
+		foreach ($request->file() as $file) {
+			foreach ($file as $f) {
+				$f->move(storage_path('/storage/projects/'.$idUser.'/'.$idProject.''), time().'_'.$f->getClientOriginalName());
+			}
+		}
 		return redirect('/profile'); 
 	}
 }

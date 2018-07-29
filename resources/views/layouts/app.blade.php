@@ -76,9 +76,13 @@
                         @endauth
                     </ul>
                     @guest
-                    <div class="form-inline btn-group" role="group">
-                        <a class="btn {{ (Route::currentRouteName() == 'register') ? 'btn-secondary' : 'btn-outline-light' }}" type="button" href="{{ url('/register') }}">Регистрация</a>
-                        <a class="btn {{ (Route::currentRouteName() == 'login') ? 'btn-secondary' : 'btn-outline-light' }}" type="button" href="{{ url('/login') }}">Вход</a>
+                    <div class="form-inline" role="group">
+                        <form action="{{ url('/register') }}" class="pr-2">
+                            <button type="submit" class="btn {{ (Route::currentRouteName() == 'register') ? 'btn-secondary' : 'btn-outline-light' }}" type="button">Регистрация</button>
+                        </form>
+                        <form action="{{ url('/login') }}">
+                            <button type="submit" class="btn {{ (Route::currentRouteName() == 'login') ? 'btn-secondary' : 'btn-outline-light' }}" type="button">Вход</button>
+                        </form>
                     </div>
                     @endguest
                 </div>

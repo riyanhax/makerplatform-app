@@ -27,7 +27,7 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ asset('assets/photos/1.jpg') }}" alt="First slide">
+                <img class="d-block w-100" src="{{ asset('assets/photos/6.jpg') }}" alt="First slide">
               </div>
               <div class="carousel-item">
                 <img class="d-block w-100" src="{{ asset('assets/photos/2.jpg') }}" alt="Second slide">
@@ -73,7 +73,7 @@
 
       <div class="col order-3">
         <div class="card bg-dark text-white my-2">
-          <img class="card-img-top" src="{{ asset('assets/photos/6.jpg') }}" alt="Card image cap">
+          <img class="card-img-top" src="{{ asset('assets/photos/1.jpg') }}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">{{ $top[2]['ProjectName'] }}</h5>
             <p class="card-text">{{ $top[2]['Text'] }}</p>

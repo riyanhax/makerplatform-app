@@ -75,8 +75,8 @@
         <div class="card bg-dark text-white my-2">
           <img class="card-img-top" src="assets/background.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title">{{ $top[1]['ProjectName'] }}</h5>
-            <p class="card-text">{{ $top[1]['Text'] }}</p>
+            <h5 class="card-title">{{ $top[2]['ProjectName'] }}</h5>
+            <p class="card-text">{{ $top[2]['Text'] }}</p>
             <a href="#" class="btn btn-primary btn-sm">Подробнее</a>
           </div>
         </div>

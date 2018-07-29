@@ -7,6 +7,7 @@ use App\User;
 use App\project;
 use Illuminate\Support\Facades\Auth;
 use DB;
+use Carbon\Carbon;
 
 class IndexController extends Controller
 {
@@ -34,7 +35,7 @@ class IndexController extends Controller
     public function profile()
     {
 		$infoAboutUser = User::select(['name', 'surname', 'patronymic', 'email'])->WHERE('id', '8')->get();
-		$projects = project::select(['ProjectName', 'DateAdd', 'dateUpdate'])->WHERE('idUser', '8')->get();		//ВЫВОДИТ ТРЕТЬЕГО
+		$projects = project::select(['ProjectName', 'created_at', 'updated_at'])->WHERE('idUser', '8')->get();		//ВЫВОДИТ ТРЕТЬЕГО
 		return  view('profile')->with(['infoAboutUser'=> $infoAboutUser, 'projects'=>$projects]);
 	}
 	
@@ -49,10 +50,26 @@ class IndexController extends Controller
 	{
 		$infoProject = DB::table('projects')
 			->join('users', 'projects.idUser', '=', 'users.id')
-			->select('name', 'surname', 'ProjectName', 'Text', 'Rating', 'DateAdd', 'dateUpdate')
+			->select('name', 'surname', 'ProjectName', 'Text', 'Rating', 'created_at', 'updated_at')
 			->WHERE('projects.id', $id)
 			->get();
 		return view('oneproject')->with(['infoProject'=>$infoProject]);
+	}
+	
+	public function SaveProject(Request $request){
+		$this->validate($request, [
+		'Projectname' => 'required|max:64',   
+		'Description' => 'required|max:65536',
+		]);		
+		$idUser = Auth::id();
+		$data=$request->all();         
+		$project=new project;
+		$project->idUser=$idUser;
+		$project->ProjectName=$request->input('Projectname');
+		$project->Text=$request->input('Description');
+		$project->Rating = 10;
+		$project->save();  
+		return redirect('/profile'); 
 	}
 }
 

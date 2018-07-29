@@ -21,7 +21,7 @@ Route::get('/profile', 'IndexController@profile')->name('profile')->middleware('
 Route::get('/add-project', 'IndexController@addProject')->name('addproject')->middleware('auth');
 Route::post('/add-project', 'IndexController@SaveProject')->name('saveProject');
 Route::get('/project/{id}', 'IndexController@Project');
-Route::delete('delete/{project}', 'IndexController@DeletePoject')->name('projectDelete');
+Route::delete('delete/{project}', 'IndexController@DeleteProject')->name('projectDelete');
 
 
 Route::get('/upload', ['as' => 'upload_form', 'uses' => 'UploadController@getForm']);

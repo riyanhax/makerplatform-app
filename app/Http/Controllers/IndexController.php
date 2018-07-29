@@ -82,8 +82,8 @@ class IndexController extends Controller
 	}
 	
 	public function DeleteProject(project $project){
-		/*$project->delete();*/
-		return redirect('/profile?' . $project->id);
+		$project->delete();
+		return redirect('/profile');
 	}
 }
 
